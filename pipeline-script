@@ -5,7 +5,7 @@ pipeline{
     stage('compile'){
       steps{
         script{
-          echo "compiling the application...."
+          bat 'mvn compile'
         }
       }
     }
