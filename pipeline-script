@@ -5,6 +5,14 @@ tools {
     maven 'Maven' // This should match the name you provided in Global Tool Configuration
 }
   stages{
+
+    stage('validate'){
+      steps{
+        script{
+          bat "mvn validate"
+        }
+      }
+    }
     stage('compile'){
       steps{
         script{
@@ -12,24 +20,10 @@ tools {
         }
       }
     }
-    stage('build'){
-      steps{
-        script{
-          echo "building the application...."
-        }
-      }
-    }
     stage('test'){
       steps{
         script{
-          echo "testing the application...."
-        }
-      }
-    }
-    stage('deploy'){
-      steps{
-        script{
-          echo "deploying the application...."
+          bat "mvn test"
         }
       }
     }
