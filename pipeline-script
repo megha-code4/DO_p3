@@ -1,6 +1,11 @@
 #!/usr/bin/env groovy
 pipeline{
   agent any
+tools {
+        // Define the Maven tool used in your Jenkins installation
+        maven 'Maven 3.9.8' // Adjust the Maven version based on your Jenkins configuration
+    }
+
   stages{
     stage('compile'){
       steps{
