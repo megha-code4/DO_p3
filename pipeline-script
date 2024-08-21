@@ -27,5 +27,12 @@ tools {
         }
       }
     }
+ stage('package'){
+      steps{
+        script{
+          bat "mvn package"
+        }
+      }
+}
   }
 }
