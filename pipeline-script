@@ -1,6 +1,9 @@
 #!/usr/bin/env groovy
 pipeline{
   agent any
+tools {
+    maven 'Maven' // This should match the name you provided in Global Tool Configuration
+}
   stages{
     stage('compile'){
       steps{
