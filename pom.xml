@@ -32,8 +32,9 @@
       <id>local-repo</id>
       <name>Releases Repository</name>
       <url>file:///G:\Xampp\htdocs</url>
-    </distributionManagement>
 </repository>
+    </distributionManagement>
+
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
