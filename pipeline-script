@@ -34,5 +34,19 @@ tools {
         }
       }
 }
+ stage('Installation in Local'){
+      steps{
+        script{
+          bat "mvn install"
   }
+}
+}
+ stage('Deployment'){
+      steps{
+        script{
+          bat "mvn deploy"
+}
+}
+}
+}
 }
